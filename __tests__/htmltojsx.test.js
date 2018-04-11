@@ -7,9 +7,9 @@
  *  of patent rights can be found in the PATENTS file in the same directory.
  *
  */
-import HTMLtoJSX from '../src/htmltojsx';
+import HTMLtoJSX from '../src/index';
 
-describe('htmltojsx', () => {
+describe('HTMLtoJSX', () => {
   it('should handle basic HTML', () => {
     const converter = new HTMLtoJSX({ createClass: false });
     expect(converter.convert('<div>Hello world!</div>').trim()).toBe('<div>Hello world!</div>');

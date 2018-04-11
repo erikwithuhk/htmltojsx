@@ -1,5 +1,5 @@
 node_modules
-build
+lib
 temp
 .DS_Store
 *.sublime-project
