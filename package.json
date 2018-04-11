@@ -49,7 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/reactjs/react-magic.git"
+    "url": "git+https://github.com/erikwithuhk/htmltojsx.git"
   },
   "keywords": [
     "react",
