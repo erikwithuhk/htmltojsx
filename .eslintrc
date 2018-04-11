@@ -1,0 +1,34 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "flowtype",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    // We use the 'import' plugin which allows for cases "flow" awareness.
+    "no-duplicate-imports": 0,
+    // A .jsx extension is not required for files containing jsx.
+    "react/jsx-filename-extension": 0,
+    // This rule struggles with flow and class properties.
+    "react/sort-comp": 0,
+    // We use global requires in various places, e.g. code splitting instances.
+    "global-require": 0,
+    "prettier/prettier": ["error", {
+      "bracketSpacing": true,
+      "printWidth": 100,
+      "singleQuote": true,
+      "trailingComma": "all"
+    }],
+  }
+}
