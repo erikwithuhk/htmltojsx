@@ -1,6 +1,6 @@
 {
   "name": "@erikwithuhk/html-to-jsx",
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "description": "Converts HTML to JSX for use with React",
   "main": "lib/index.js",
   "bin": "lib/cli.js",
