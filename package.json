@@ -1,19 +1,47 @@
 {
-  "name": "htmltojsx",
-  "version": "0.3.1-dev",
+  "name": "@erikwithuhk/html-to-jsx",
+  "version": "0.0.0",
   "description": "Converts HTML to JSX for use with React",
-  "main": "src/index.js",
-  "bin": "src/cli.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/index.js",
+  "bin": "lib/cli.js",
   "scripts": {
-    "build": "./bin/build.sh",
+    "build": "npm run clean && babel src --out-dir lib",
     "clean": "rimraf lib",
     "lint": "eslint ./src",
+    "prepare": "npm run build",
+    "release": "npm run np",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:watchAll": "jest --watchAll"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikwithuhk/html-to-jsx.git"
+  },
+  "keywords": [
+    "react",
+    "jsx",
+    "htmltojsx",
+    "html",
+    "react-component",
+    "parser"
+  ],
+  "author": "Daniel Lo Nigro <daniel@dan.cx> (http://dan.cx/)",
+  "contributors": [
+    "erikwithuhk"
+  ],
+  "maintainers": [
+    "erikwithuhk"
+  ],
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/reactjs/react-magic/issues"
+  },
+  "homepage": "https://github.com/reactjs/react-magic",
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.44",
     "jsdom-no-contextify": "~3.1.0",
     "react": "~15.4.1",
     "react-dom": "~15.4.1",
@@ -21,12 +49,12 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
     "@babel/preset-env": "^7.0.0-beta.44",
     "babel-core": "^7.0.0-0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.3",
-    "del": "~2.2.0",
     "eslint": ">=4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -35,33 +63,10 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.4.0",
-    "gulp": "~3.9.0",
-    "gulp-gh-pages": "~0.5.4",
-    "gulp-livereload": "~3.8.1",
-    "gulp-rename": "~1.2.0",
-    "gulp-uglify": "~1.5.1",
-    "gulp-webpack": "~1.5.0",
     "jest": "^22.4.3",
-    "merge-stream": "~1.0.0",
+    "np": "^2.20.1",
     "prettier": "^1.11.1",
     "regenerator-runtime": "^0.11.1",
     "rimraf": "^2.6.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/erikwithuhk/htmltojsx.git"
-  },
-  "keywords": [
-    "react",
-    "jsx",
-    "htmltojsx",
-    "html",
-    "react-component"
-  ],
-  "author": "Daniel Lo Nigro <daniel@dan.cx> (http://dan.cx/)",
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/reactjs/react-magic/issues"
-  },
-  "homepage": "https://github.com/reactjs/react-magic"
+  }
 }

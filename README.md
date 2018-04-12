@@ -1,77 +1,97 @@
-React-Magic and HTMLtoJSX
-=========================
+# @erikwithuhk/html-to-jsx
 
-React-Magic is an experimental library that uses the power of Facebook's
-[React](http://facebook.github.io/react/) library to inject AJAX-loading
-goodness into plain old HTML webpages, without having to write any custom
-JavaScript. You can even use CSS transitions between the pages. Simply add a
-single script tag (or click a bookmarklet) and "it just works".
+html-to-jsx converts HTML to JSX for use with [React](facebook.github.io/react/).
 
-[HTMLtoJSX](README-htmltojsx.md) is a component of React-Magic that converts
-HTML to JSX. It can be used standalone, either on the web or via Node.js.
+### Differences from the Original Package
 
-Under the covers
-================
+This is a fork of react-magic / ksjdfkj on npm, that introduces the following changes:
 
-React-Magic intercepts all navigation (link clicks and form posts) and loads
-the requested page via an AJAX request. React is then used to "diff" the old
-HTML with the new HTML, and only update the parts of the DOM that have been
-changed.
+- ​
 
-Demos
-=====
+# Installation
 
-* [Page transitions](http://stuff.dan.cx/facebook/react-hacks/magic/red.php)
-* [Form submission](http://stuff.dan.cx/facebook/react-hacks/magic/feedback1.htm)
-
-Usage
-=====
-
-To use React-Magic, add a `<script>` tag to the bottom of your page, right above
-the `</body>`:
-
-```html
-<script src="http://magic.reactjs.net/magic-loader.js"></script>
+```
+npm install @erikwithuhk/html-to-jsx
 ```
 
-This handles loading all the required scripts. Alternatively, you can put all
-the required scripts instead:
+# Usage
 
-```html
-<script src="http://fb.me/react-0.13.3.min.js"></script>
-<script src="http://fb.me/JSXTransformer-0.13.3.js"></script>
-<script src="http://magic.reactjs.net/magic.min.js"></script>
+HTMLtoJSX can be used either as a command-line application or as a Node.js module. To use the command-line version, invoke the `htmltojsx` command:
+
+```
+$ htmltojsx --help
+Converts HTML to JSX for use with React.
+Usage: htmltojsx [-c ComponentName] file.htm
+
+Examples:
+  htmltojsx -c AwesomeComponent awesome.htm    Creates React component "AwesomeComponent" based on awesome.htm
+
+
+Options:
+  --className, -c  Create a React component (wraps JSX in React.createClass call)
+  --help           Show help
 ```
 
-The end result is the same.
+To use the Node.js module, `require('htmltojsx')` and create a new instance. This is the same interface as the web-based version:
 
-A fun party trick is adding a bookmarklet to your browser which can be used to
-Reactify *any* plain HTML site. Click it and mystify your friends:
-
-```javascript
-javascript:(function(b){function c(){if(0!==d.length){var e=d.shift(),a=b.createElement("script");a.src=e;a.onload=c;b.body.appendChild(a)}}var d=["http://fb.me/react-0.13.3.min.js","http://fb.me/JSXTransformer-0.13.3.js","http://magic.reactjs.net/magic.min.js"];c();return!1})(document);
+```js
+var HTMLtoJSX = require('htmltojsx');
+var converter = new HTMLtoJSX({
+  createClass: true,
+  outputClassName: 'AwesomeComponent'
+});
+var output = converter.convert('<div>Hello world!</div>');
 ```
 
-This just loads the same scripts as referenced above.
+# Changelog
 
-Caveat Emptor
-=============
-Even magic comes with its limitations. Since this project is experimental, it may not
-work properly in all browsers. If you're looking for something that works in
-IE6, you've come to the wrong place.
+## 0.3.0 - 4th September 2017
 
-Development
-===========
-Run `gulp watch` from the root to automatically rebuild the compiled JavaScript
-files as you edit them. To run the unit tests, point a web server to 
-`build/site` then navigate to `test.htm`. If you use the LiveReload browser 
-extension, the tests will automatically reload and rerun when you modify any of 
-the JavaScript.
+- [#97](https://github.com/reactjs/react-magic/pull/97) - Update to React 15
+- [#100](https://github.com/reactjs/react-magic/pull/100) - Remove JSX class-level indention when transforming HTML into JSX
+- [#136](https://github.com/reactjs/react-magic/pull/136) and [#138](https://github.com/reactjs/react-magic/pull/138) - Handle SVG attributes
+  0.2.6 - 28th November 2016
 
-Similar Projects
-================
-This project has been inspired by the
-[Ajaxify](https://github.com/browserstate/ajaxify) project, which achieves a
-similar outcome but using jQuery. What makes React-Magic different is that it
-only updates the DOM nodes that have changed, whereas Ajaxify and similar
-solutions just blow away the whole document.body on every page load.
+------
+
+- [#55](https://github.com/reactjs/react-magic/pull/55) - Handle braces in text. *Thanks to [Solar Olugebefola](https://github.com/solugebefola)*
+- [#49](https://github.com/reactjs/react-magic/pull/49) - Fix quotation mark replacement. *Thanks to [Geoffrey Challen](https://github.com/gchallen)*
+
+## 0.2.5 - 26th October 2015
+
+- [#33](https://github.com/reactjs/react-magic/issues/33) - Correctly handle `<textarea>`s and `<pre>`s
+- [#35](https://github.com/reactjs/react-magic/issues/35) - Handle internal stylesheets (`<style>` tags). *Thanks to [Trevor Copeland](https://github.com/sickslives)*
+
+## 0.2.4 - 6th August 2015
+
+- [#31](https://github.com/reactjs/react-magic/issues/31) - Fixed `jsdom`
+  dependency
+
+## 0.2.3 - 5th August 2015
+
+- [#8](https://github.com/reactjs/react-magic/issues/8) - Handle
+  case-insensitive attributes and style names
+- [#29](https://github.com/reactjs/react-magic/pull/29) - Switch to
+  `jsdom-no-contextify` to support older versions of Node.js
+
+## 0.2.2 - 4th May 2015
+
+- [#21](https://github.com/reactjs/react-magic/issues/21) - Allow output of
+  React classes without class name
+- [#25](https://github.com/reactjs/react-magic/pull/25) - Update version of
+  JSDOM
+
+## 0.2.1 - 1st February 2015
+
+- [#10](https://github.com/reactjs/react-magic/pull/10) - Handle inline CSS
+  shorthand style values
+- [#13](https://github.com/reactjs/react-magic/pull/13) - Maintain valueless
+  attributes handled by JSX
+- [#15](https://github.com/reactjs/react-magic/pull/15) - Use uncontrolled
+  input fields so they can still be edited
+- [#11](https://github.com/reactjs/react-magic/issues/11) - Ensure HTML
+  entities are handled correctly
+
+## 0.2.0 - 7th September 2014
+
+- Initial release
