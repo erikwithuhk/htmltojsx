@@ -9,7 +9,7 @@
     "build:watch": "npm run build -- --watch",
     "clean": "rimraf lib",
     "lint": "eslint ./src",
-    "prepublishOnly": "npm run build",
+    "prepublish": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:watchAll": "jest --watchAll"
