@@ -18,124 +18,13 @@
  */
 
 import { isNumeric, trimEnd } from './utils';
+import {
+  NODE_TYPE,
+  ATTRIBUTE_MAPPING,
+  ELEMENT_ATTRIBUTE_MAPPING,
+  ELEMENT_TAG_NAME_MAPPING,
+} from './mapping';
 import parseStyles from './parseStyles';
-
-// https://developer.mozilla.org/en-US/docs/Web/API/Node.nodeType
-const NODE_TYPE = {
-  ELEMENT: 1,
-  TEXT: 3,
-  COMMENT: 8,
-};
-
-const ATTRIBUTE_MAPPING = {
-  for: 'htmlFor',
-  class: 'className',
-};
-
-const ELEMENT_ATTRIBUTE_MAPPING = {
-  input: {
-    checked: 'defaultChecked',
-    value: 'defaultValue',
-  },
-};
-
-// Reference: https://developer.mozilla.org/en-US/docs/Web/SVG/Element#SVG_elements
-const ELEMENT_TAG_NAME_MAPPING = {
-  a: 'a',
-  altglyph: 'altGlyph',
-  altglyphdef: 'altGlyphDef',
-  altglyphitem: 'altGlyphItem',
-  animate: 'animate',
-  animatecolor: 'animateColor',
-  animatemotion: 'animateMotion',
-  animatetransform: 'animateTransform',
-  audio: 'audio',
-  canvas: 'canvas',
-  circle: 'circle',
-  clippath: 'clipPath',
-  'color-profile': 'colorProfile',
-  cursor: 'cursor',
-  defs: 'defs',
-  desc: 'desc',
-  discard: 'discard',
-  ellipse: 'ellipse',
-  feblend: 'feBlend',
-  fecolormatrix: 'feColorMatrix',
-  fecomponenttransfer: 'feComponentTransfer',
-  fecomposite: 'feComposite',
-  feconvolvematrix: 'feConvolveMatrix',
-  fediffuselighting: 'feDiffuseLighting',
-  fedisplacementmap: 'feDisplacementMap',
-  fedistantlight: 'feDistantLight',
-  fedropshadow: 'feDropShadow',
-  feflood: 'feFlood',
-  fefunca: 'feFuncA',
-  fefuncb: 'feFuncB',
-  fefuncg: 'feFuncG',
-  fefuncr: 'feFuncR',
-  fegaussianblur: 'feGaussianBlur',
-  feimage: 'feImage',
-  femerge: 'feMerge',
-  femergenode: 'feMergeNode',
-  femorphology: 'feMorphology',
-  feoffset: 'feOffset',
-  fepointlight: 'fePointLight',
-  fespecularlighting: 'feSpecularLighting',
-  fespotlight: 'feSpotLight',
-  fetile: 'feTile',
-  feturbulence: 'feTurbulence',
-  filter: 'filter',
-  font: 'font',
-  'font-face': 'fontFace',
-  'font-face-format': 'fontFaceFormat',
-  'font-face-name': 'fontFaceName',
-  'font-face-src': 'fontFaceSrc',
-  'font-face-uri': 'fontFaceUri',
-  foreignobject: 'foreignObject',
-  g: 'g',
-  glyph: 'glyph',
-  glyphref: 'glyphRef',
-  hatch: 'hatch',
-  hatchpath: 'hatchpath',
-  hkern: 'hkern',
-  iframe: 'iframe',
-  image: 'image',
-  line: 'line',
-  lineargradient: 'linearGradient',
-  marker: 'marker',
-  mask: 'mask',
-  mesh: 'mesh',
-  meshgradient: 'meshgradient',
-  meshpatch: 'meshpatch',
-  meshrow: 'meshrow',
-  metadata: 'metadata',
-  'missing-glyph': 'missingGlyph',
-  mpath: 'mpath',
-  path: 'path',
-  pattern: 'pattern',
-  polygon: 'polygon',
-  polyline: 'polyline',
-  radialgradient: 'radialGradient',
-  rect: 'rect',
-  script: 'script',
-  set: 'set',
-  solidcolor: 'solidcolor',
-  stop: 'stop',
-  style: 'style',
-  svg: 'svg',
-  switch: 'switch',
-  symbol: 'symbol',
-  text: 'text',
-  textpath: 'textPath',
-  title: 'title',
-  tref: 'tref',
-  tspan: 'tspan',
-  unknown: 'unknown',
-  use: 'use',
-  video: 'video',
-  view: 'view',
-  vkern: 'vkern',
-};
 
 const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
 const SVGDOMPropertyConfig = require('react-dom/lib/SVGDOMPropertyConfig');
@@ -200,17 +89,13 @@ const repeatString = (string, times) => new Array(times).fill(string).join('');
  */
 const isEmpty = string => !/[^\s]/.test(string);
 
-const createElement = (tag, isInBrowser) => {
-  // Browser environment, use document.createElement directly.
-  // eslint-disable-next-line no-undef
-  if (isInBrowser) {
-    return document.createElement(tag);
-  }
-  // Node.js-like environment, use jsdom.
-  const { jsdom } = require('jsdom-no-contextify');
-  const window = jsdom().defaultView;
-  return window.document.createElement(tag);
-};
+/**
+ * Creates an HTML element from a tagname
+ *
+ * @param {string} value
+ * @return {object}
+ */
+const createElement = tag => document.createElement(tag);
 
 /**
  * Escapes special characters by converting them to their escaped equivalent
@@ -219,8 +104,8 @@ const createElement = (tag, isInBrowser) => {
  * @param {string} value
  * @return {string}
  */
-const escapeSpecialChars = (value, isInBrowser) => {
-  const tempEl = createElement('div', isInBrowser);
+const escapeSpecialChars = (value, containerTag) => {
+  const tempEl = createElement(containerTag);
   // Uses this One Weird Trick to escape text - Raw text inserted as textContent
   // will have its escaped version in innerHTML.
   tempEl.textContent = value;
@@ -228,13 +113,8 @@ const escapeSpecialChars = (value, isInBrowser) => {
 };
 
 class HTMLtoJSX {
-  constructor({
-    createClass = true,
-    isInBrowser = true,
-    indent = '  ',
-    outputClassName = undefined,
-  } = {}) {
-    this.config = { createClass, isInBrowser, indent, outputClassName };
+  constructor({ createClass = false, indent = '  ', outputClassName = undefined } = {}) {
+    this.config = { createClass, indent, outputClassName };
   }
   /**
    * Reset the internal state of the converter
@@ -250,10 +130,11 @@ class HTMLtoJSX {
    * @param {string} html HTML to convert
    * @return {string} JSX
    */
-  convert(html) {
+  convert(html, { containerTag = 'div' } = {}) {
     this.reset();
+    this.config.containerTag = containerTag;
 
-    const containerEl = createElement('div', this.config.isInBrowser);
+    const containerEl = createElement(this.config.containerTag);
     containerEl.innerHTML = `\n${this._cleanInput(html)}\n`;
 
     if (this.config.createClass) {
@@ -494,7 +375,7 @@ class HTMLtoJSX {
       return;
     }
 
-    let text = escapeSpecialChars(node.textContent, this.config.isInBrowser);
+    let text = escapeSpecialChars(node.textContent, this.config.containerTag);
 
     if (this._inPreTag) {
       // If this text is contained within a <pre>, we need to ensure the JSX
