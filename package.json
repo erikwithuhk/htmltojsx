@@ -2,8 +2,10 @@
   "name": "@erikwithuhk/html-to-jsx",
   "version": "1.0.1-1",
   "description": "Converts HTML to JSX for use with React",
-  "main": "lib/index.js",
-  "bin": "lib/cli.js",
+  "main": "index.js",
+  "files": [
+    "/lib/**/*.js"
+  ],
   "scripts": {
     "build": "npm run clean && babel src --out-dir lib --copy-files",
     "build:watch": "npm run build -- --watch",
