@@ -11,7 +11,7 @@
     "build:watch": "npm run build -- --watch",
     "clean": "rimraf lib",
     "lint": "eslint ./src",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && mv ./lib/* ./ && rimraf lib",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:watchAll": "jest --watchAll"
