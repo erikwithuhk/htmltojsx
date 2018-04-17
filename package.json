@@ -2,7 +2,7 @@
   "name": "@erikwithuhk/html-to-jsx",
   "version": "1.0.1",
   "description": "Converts HTML to JSX for use with React",
-  "main": "/lib/index.js",
+  "main": "index.js",
   "files": [
     "/lib/**/*.js"
   ],
@@ -11,6 +11,7 @@
     "build:watch": "npm run build -- --watch",
     "clean": "rimraf lib",
     "lint": "eslint ./src",
+    "preinstall": "mv ./lib/* ./ && rimraf ./lib",
     "prepublish": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
