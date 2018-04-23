@@ -446,7 +446,7 @@ class HTMLtoJSX {
    */
   _getStyleAttribute(styles) {
     const jsxStyles = parseStyles(styles);
-    return `style={{${jsxStyles}}}`;
+    return `style={${jsxStyles}}`;
   }
 
   /**
