@@ -6,7 +6,7 @@ import { hyphenToCamelCase, isConvertiblePixelValue, isNumeric, trimEnd } from '
  * @param {string} key CSS style key
  * @return {string} JSX style key
  */
-const cssPropertyNameToJSXStylePropertyName = key => {
+const toJSXKey = key => {
   // Don't capitalize -ms- prefix
   if (/^-ms-/.test(key)) {
     return hyphenToCamelCase(key.substr(1));
@@ -23,7 +23,7 @@ const cssPropertyNameToJSXStylePropertyName = key => {
 const toJSXStyleObjectString = styles => {
   const styleObj = {};
   Object.keys(styles).forEach(key => {
-    styleObj[cssPropertyNameToJSXStylePropertyName(key)] = styles[key];
+    styleObj[toJSXKey(key)] = styles[key];
   });
   return JSON.stringify(styleObj);
 };
