@@ -6,7 +6,7 @@ import { hyphenToCamelCase, isConvertiblePixelValue, isNumeric, trimEnd } from '
  * @param {string} key CSS style key
  * @return {string} JSX style key
  */
-const toJSXKey = key => {
+const cssPropertyNameToJSXStylePropertyName = key => {
   // Don't capitalize -ms- prefix
   if (/^-ms-/.test(key)) {
     return hyphenToCamelCase(key.substr(1));
@@ -15,33 +15,18 @@ const toJSXKey = key => {
 };
 
 /**
- * Convert the CSS style value to a JSX style value
- *
- * @param {string} value CSS style value
- * @return {string} JSX style value
- */
-const toJSXValue = value => {
-  if (isNumeric(value)) {
-    // If numeric, no quotes
-    return value;
-  } else if (isConvertiblePixelValue(value)) {
-    // "500px" -> 500
-    return trimEnd(value, 'px');
-  }
-  // Probably a string, wrap it in quotes
-  return `'${value.replace(/'/g, '"')}'`;
-};
-
-/**
  * Convert the style information represented by this parser into a JSX
- * string
+ * style object string
  *
  * @return {string}
  */
-const toJSXString = styles =>
-  Object.keys(styles)
-    .map(key => `${toJSXKey(key)}: ${toJSXValue(styles[key])}`)
-    .join(', ');
+const toJSXStyleObjectString = styles => {
+  const styleObj = {};
+  Object.keys(styles).forEach(key => {
+    styleObj[cssPropertyNameToJSXStylePropertyName(key)] = styles[key];
+  });
+  return JSON.stringify(styleObj);
+};
 
 /**
  * Handles parsing of inline styles
@@ -59,7 +44,7 @@ const parseStyles = rawStyles => {
     }
     return { ...acc };
   }, {});
-  return toJSXString(styles);
+  return toJSXStyleObjectString(styles);
 };
 
 export default parseStyles;
