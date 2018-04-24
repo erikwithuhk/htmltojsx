@@ -111,7 +111,7 @@ describe('HTMLtoJSX', () => {
     it('should convert basic "style" attributes', () => {
       const converter = new HTMLtoJSX({ createClass: false });
       expect(converter.convert('<div style="color: red">Test</div>').trim()).toBe(
-        "<div style={{color: 'red'}}>Test</div>",
+        "<div style={{'color': 'red'}}>Test</div>",
       );
     });
 
@@ -119,20 +119,20 @@ describe('HTMLtoJSX', () => {
       const converter = new HTMLtoJSX({ createClass: false });
       expect(
         converter.convert('<div style="padding: 10px 15px 20px 25px;">Test</div>').trim(),
-      ).toBe("<div style={{padding: '10px 15px 20px 25px'}}>Test</div>");
+      ).toBe("<div style={{'padding': '10px 15px 20px 25px'}}>Test</div>");
     });
 
     it('should convert numeric "style" attributes', () => {
       const converter = new HTMLtoJSX({ createClass: false });
       expect(converter.convert('<div style="width: 100px">Test</div>').trim()).toBe(
-        '<div style={{width: 100}}>Test</div>',
+        "<div style={{'width': 100}}>Test</div>",
       );
     });
 
     it('should convert dashed "style" attributes', () => {
       const converter = new HTMLtoJSX({ createClass: false });
       expect(converter.convert('<div style="font-size: 12pt">Test</div>').trim()).toBe(
-        "<div style={{fontSize: '12pt'}}>Test</div>",
+        "<div style={{'fontSize': '12pt'}}>Test</div>",
       );
     });
 
@@ -142,7 +142,7 @@ describe('HTMLtoJSX', () => {
         converter
           .convert('<div style="-moz-hyphens: auto; -webkit-hyphens: auto">Test</div>')
           .trim(),
-      ).toBe("<div style={{MozHyphens: 'auto', WebkitHyphens: 'auto'}}>Test</div>");
+      ).toBe("<div style={{'MozHyphens': 'auto', 'WebkitHyphens': 'auto'}}>Test</div>");
     });
 
     it('should convert uppercase vendor-prefix "style" attributes', () => {
@@ -151,7 +151,7 @@ describe('HTMLtoJSX', () => {
         converter
           .convert('<div style="-MOZ-HYPHENS: auto; -WEBKIT-HYPHENS: auto">Test</div>')
           .trim(),
-      ).toBe("<div style={{MozHyphens: 'auto', WebkitHyphens: 'auto'}}>Test</div>");
+      ).toBe("<div style={{'MozHyphens': 'auto', 'WebkitHyphens': 'auto'}}>Test</div>");
     });
 
     it('should convert "style" attributes with vendor prefix-like strings in the middle and mixed case', () => {
@@ -162,27 +162,29 @@ describe('HTMLtoJSX', () => {
             '<div style="myclass-MOZ-HYPHENS: auto; myclass-WEBKIT-HYPHENS: auto">Test</div>',
           )
           .trim(),
-      ).toBe("<div style={{myclassMozHyphens: 'auto', myclassWebkitHyphens: 'auto'}}>Test</div>");
+      ).toBe(
+        "<div style={{'myclassMozHyphens': 'auto', 'myclassWebkitHyphens': 'auto'}}>Test</div>",
+      );
     });
 
     it('should convert -ms- prefix "style" attributes', () => {
       const converter = new HTMLtoJSX({ createClass: false });
       expect(converter.convert('<div style="-ms-hyphens: auto">Test</div>').trim()).toBe(
-        "<div style={{msHyphens: 'auto'}}>Test</div>",
+        "<div style={{'msHyphens': 'auto'}}>Test</div>",
       );
     });
 
     it('should convert "style" attributes with -ms- in the middle', () => {
       const converter = new HTMLtoJSX({ createClass: false });
       expect(converter.convert('<div style="myclass-ms-hyphens: auto">Test</div>').trim()).toBe(
-        "<div style={{myclassMsHyphens: 'auto'}}>Test</div>",
+        "<div style={{'myclassMsHyphens': 'auto'}}>Test</div>",
       );
     });
 
     it('should convert uppercase "style" attributes', () => {
       const converter = new HTMLtoJSX({ createClass: false });
       expect(converter.convert('<div style="TEXT-ALIGN: center">Test</div>').trim()).toBe(
-        "<div style={{textAlign: 'center'}}>Test</div>",
+        "<div style={{'textAlign': 'center'}}>Test</div>",
       );
     });
 
