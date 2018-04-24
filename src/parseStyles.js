@@ -39,8 +39,8 @@ const toJSXValue = value => {
  * @return {string}
  */
 const toJSXString = styles =>
-  Object.keys(styles)
-    .map(key => `${toJSXKey(key)}: ${toJSXValue(styles[key])}`)
+  Object.entries(styles)
+    .map(([key, value]) => `'${toJSXKey(key)}': ${toJSXValue(value)}`)
     .join(', ');
 
 /**
