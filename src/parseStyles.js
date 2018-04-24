@@ -1,3 +1,4 @@
+import jsStringEscape from 'js-string-escape';
 import { hyphenToCamelCase, isConvertiblePixelValue, isNumeric, trimEnd } from './utils';
 
 /**
@@ -28,8 +29,8 @@ const toJSXValue = value => {
     // "500px" -> 500
     return trimEnd(value, 'px');
   }
-  // Probably a string, wrap it in quotes
-  return `'${value.replace(/'/g, '"')}'`;
+  // Probably a string, wrap it in quotes and escape it
+  return `'${jsStringEscape(value)}'`;
 };
 
 /**
@@ -40,7 +41,7 @@ const toJSXValue = value => {
  */
 const toJSXString = styles =>
   Object.entries(styles)
-    .map(([key, value]) => `'${toJSXKey(key)}': ${toJSXValue(value)}`)
+    .map(([key, value]) => `'${jsStringEscape(toJSXKey(key))}': ${toJSXValue(value)}`)
     .join(', ');
 
 /**
