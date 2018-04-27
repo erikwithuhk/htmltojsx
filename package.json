@@ -30,7 +30,9 @@
   ],
   "author": "Daniel Lo Nigro <daniel@dan.cx> (http://dan.cx/)",
   "contributors": [
-    "erikwithuhk"
+    "erikwithuhk",
+    "gimlids",
+    "kohlmannj"
   ],
   "maintainers": [
     "erikwithuhk"
@@ -41,10 +43,11 @@
   },
   "homepage": "https://github.com/reactjs/react-magic",
   "dependencies": {
+    "@kohlmannj/css-to-object": "^1.2.1",
     "js-string-escape": "^1.0.1",
     "jsdom-no-contextify": "~3.1.0",
-    "react": "~15.4.1",
-    "react-dom": "~15.4.1",
+    "react": "~15.6.2",
+    "react-dom": "~15.6.2",
     "yargs": "~4.6.0"
   },
   "devDependencies": {
@@ -53,7 +56,10 @@
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.3",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-15": "^1.0.5",
     "eslint": ">=4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -64,6 +70,7 @@
     "eslint-plugin-react": "^7.4.0",
     "jest": "^22.4.3",
     "prettier": "^1.11.1",
+    "react-test-renderer": "~15.6.2",
     "regenerator-runtime": "^0.11.1",
     "rimraf": "^2.6.2"
   }

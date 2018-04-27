@@ -1,0 +1,1601 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HTMLtoJSX Attribute transformations should convert "class" attribute 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <div
+    className="awesome"
+  >
+    Test
+  </div>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Test",
+      "className": "awesome",
+    },
+    "ref": null,
+    "rendered": "Test",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Test",
+        "className": "awesome",
+      },
+      "ref": null,
+      "rendered": "Test",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should convert "enctype" attribute to "encType" 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <form
+    encType="application/x-www-form-urlencoded"
+    method="post"
+  >
+    Test
+  </form>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Test",
+      "encType": "application/x-www-form-urlencoded",
+      "method": "post",
+    },
+    "ref": null,
+    "rendered": "Test",
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Test",
+        "encType": "application/x-www-form-urlencoded",
+        "method": "post",
+      },
+      "ref": null,
+      "rendered": "Test",
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should convert "for" attribute 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <label
+    htmlFor="potato"
+  >
+    Test
+  </label>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Test",
+      "htmlFor": "potato",
+    },
+    "ref": null,
+    "rendered": "Test",
+    "type": "label",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Test",
+        "htmlFor": "potato",
+      },
+      "ref": null,
+      "rendered": "Test",
+      "type": "label",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should convert "http-equiv" attribute to "httpEquiv" 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <meta
+    httpEquiv="refresh"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "httpEquiv": "refresh",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": "meta",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "httpEquiv": "refresh",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "meta",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should convert "maxlength" attribute to "maxLength" 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <input
+    maxLength={2}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "maxLength": 2,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": "input",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "maxLength": 2,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "input",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should convert CSS shorthand "style" values 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <div
+    style={
+      Object {
+        "padding": "10px 15px 20px 25px",
+      }
+    }
+  >
+    Test
+  </div>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Test",
+      "style": Object {
+        "padding": "10px 15px 20px 25px",
+      },
+    },
+    "ref": null,
+    "rendered": "Test",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Test",
+        "style": Object {
+          "padding": "10px 15px 20px 25px",
+        },
+      },
+      "ref": null,
+      "rendered": "Test",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should convert SVG attributes 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <svg
+    height={100}
+    width={100}
+  >
+    <circle
+      cx={50}
+      cy={50}
+      fill="red"
+      fillRule="evenodd"
+      r={40}
+      stroke="black"
+      strokeWidth={3}
+    />
+  </svg>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <circle
+        cx={50}
+        cy={50}
+        fill="red"
+        fillRule="evenodd"
+        r={40}
+        stroke="black"
+        strokeWidth={3}
+      />,
+      "height": 100,
+      "width": 100,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "cx": 50,
+        "cy": 50,
+        "fill": "red",
+        "fillRule": "evenodd",
+        "r": 40,
+        "stroke": "black",
+        "strokeWidth": 3,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "circle",
+    },
+    "type": "svg",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <circle
+          cx={50}
+          cy={50}
+          fill="red"
+          fillRule="evenodd"
+          r={40}
+          stroke="black"
+          strokeWidth={3}
+        />,
+        "height": 100,
+        "width": 100,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "cx": 50,
+          "cy": 50,
+          "fill": "red",
+          "fillRule": "evenodd",
+          "r": 40,
+          "stroke": "black",
+          "strokeWidth": 3,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "circle",
+      },
+      "type": "svg",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should convert basic "style" attributes 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <div
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    Test
+  </div>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Test",
+      "style": Object {
+        "color": "red",
+      },
+    },
+    "ref": null,
+    "rendered": "Test",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Test",
+        "style": Object {
+          "color": "red",
+        },
+      },
+      "ref": null,
+      "rendered": "Test",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should maintain value-less attributes 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <input
+    disabled={true}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "disabled": true,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": "input",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "disabled": true,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "input",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should not set "value" to "defaultValue" for non-<input> elements 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <select>
+    <option
+      value="Hans"
+    />
+  </select>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <option
+        value="Hans"
+      />,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "value": "Hans",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "option",
+    },
+    "type": "select",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <option
+          value="Hans"
+        />,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "value": "Hans",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "option",
+      },
+      "type": "select",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should pass thru vendor-prefix "style" attributes 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <div
+    style={
+      Object {
+        "-moz-hyphens": "auto",
+        "-webkit-hyphens": "auto",
+      }
+    }
+  >
+    Test
+  </div>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Test",
+      "style": Object {
+        "-moz-hyphens": "auto",
+        "-webkit-hyphens": "auto",
+      },
+    },
+    "ref": null,
+    "rendered": "Test",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Test",
+        "style": Object {
+          "-moz-hyphens": "auto",
+          "-webkit-hyphens": "auto",
+        },
+      },
+      "ref": null,
+      "rendered": "Test",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should set <input> "checked" to "defaultChecked" to allow box checking 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <input
+    defaultChecked={true}
+    type="checkbox"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "defaultChecked": true,
+      "type": "checkbox",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": "input",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "defaultChecked": true,
+        "type": "checkbox",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "input",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX Attribute transformations should set <input> "value" to "defaultValue" to allow input editing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <input
+    defaultValue="Darth Vader"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "defaultValue": "Darth Vader",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": "input",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "defaultValue": "Darth Vader",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "input",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX escaped characters should handle escaped < symbols 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <div>
+    &lt;
+  </div>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "<",
+    },
+    "ref": null,
+    "rendered": "<",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "<",
+      },
+      "ref": null,
+      "rendered": "<",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX escaped characters should handle unescaped copyright symbols 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <div>
+    ©
+  </div>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "©",
+    },
+    "ref": null,
+    "rendered": "©",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "©",
+      },
+      "ref": null,
+      "rendered": "©",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX should handle basic HTML 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <div>
+    Hello world!
+  </div>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Hello world!",
+    },
+    "ref": null,
+    "rendered": "Hello world!",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Hello world!",
+      },
+      "ref": null,
+      "rendered": "Hello world!",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX special tags should convert svg tag names 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <svg>
+    <clipPath>
+      <feSpotLight>
+        <linearGradient />
+      </feSpotLight>
+    </clipPath>
+  </svg>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <clipPath>
+        <feSpotLight>
+          <linearGradient />
+        </feSpotLight>
+      </clipPath>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <feSpotLight>
+          <linearGradient />
+        </feSpotLight>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <linearGradient />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "linearGradient",
+        },
+        "type": "feSpotLight",
+      },
+      "type": "clipPath",
+    },
+    "type": "svg",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <clipPath>
+          <feSpotLight>
+            <linearGradient />
+          </feSpotLight>
+        </clipPath>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <feSpotLight>
+            <linearGradient />
+          </feSpotLight>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <linearGradient />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "linearGradient",
+          },
+          "type": "feSpotLight",
+        },
+        "type": "clipPath",
+      },
+      "type": "svg",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX special tags should dangerously set <style> tag contents 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+h1 {
+    background: url('http://foo.bar/img.jpg';
+}
+",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "dangerouslySetInnerHTML": Object {
+        "__html": "
+h1 {
+    background: url('http://foo.bar/img.jpg';
+}
+",
+      },
+    },
+    "ref": null,
+    "rendered": null,
+    "type": "style",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "dangerouslySetInnerHTML": Object {
+          "__html": "
+h1 {
+    background: url('http://foo.bar/img.jpg';
+}
+",
+        },
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "style",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX special tags should do magic voodoo for <pre> 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <pre>
+    hello
+    
+
+    world
+    {
+    foo
+    }
+  </pre>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        "hello",
+        "
+",
+        "world",
+        "{",
+        "foo",
+        "}",
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      "hello",
+      "
+",
+      "world",
+      "{",
+      "foo",
+      "}",
+    ],
+    "type": "pre",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          "hello",
+          "
+",
+          "world",
+          "{",
+          "foo",
+          "}",
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        "hello",
+        "
+",
+        "world",
+        "{",
+        "foo",
+        "}",
+      ],
+      "type": "pre",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX special tags should gracefully handle malformed CSS in an HTML element's style attribute 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <span
+    style={
+      Object {
+        "*border-bottom": ".175em solid rgba( 209, 204, 189, 1)",
+        "*color": "white",
+        "*font-style": "italic",
+        "*text-shadow": "rgb(74, 144, 226) 1px 0px 0px, rgb(74, 144, 226) 0.540302px 0.841471px 0px, rgb(74, 144, 226) -0.416147px 0.909297px 0px, rgb(74, 144, 226) -0.989992px 0.14112px 0px, rgb(74, 144, 226) -0.653644px -0.756802px 0px, rgb(74, 144, 226) 0.283662px -0.958924px 0px, rgb(74, 144, 226) 0.96017px -0.279415px 0px",
+        "color": "rgb(209, 204, 189)",
+        "float": "left",
+        "font-family": "'Roboto Slab'",
+        "font-size": "590%",
+        "font-weight": "700",
+        "line-height": "80%",
+        "margin-right": ".1em",
+        "padding-left": ".1em",
+        "width": ".8em",
+      }
+    }
+  >
+    D
+  </span>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "D",
+      "style": Object {
+        "*border-bottom": ".175em solid rgba( 209, 204, 189, 1)",
+        "*color": "white",
+        "*font-style": "italic",
+        "*text-shadow": "rgb(74, 144, 226) 1px 0px 0px, rgb(74, 144, 226) 0.540302px 0.841471px 0px, rgb(74, 144, 226) -0.416147px 0.909297px 0px, rgb(74, 144, 226) -0.989992px 0.14112px 0px, rgb(74, 144, 226) -0.653644px -0.756802px 0px, rgb(74, 144, 226) 0.283662px -0.958924px 0px, rgb(74, 144, 226) 0.96017px -0.279415px 0px",
+        "color": "rgb(209, 204, 189)",
+        "float": "left",
+        "font-family": "'Roboto Slab'",
+        "font-size": "590%",
+        "font-weight": "700",
+        "line-height": "80%",
+        "margin-right": ".1em",
+        "padding-left": ".1em",
+        "width": ".8em",
+      },
+    },
+    "ref": null,
+    "rendered": "D",
+    "type": "span",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "D",
+        "style": Object {
+          "*border-bottom": ".175em solid rgba( 209, 204, 189, 1)",
+          "*color": "white",
+          "*font-style": "italic",
+          "*text-shadow": "rgb(74, 144, 226) 1px 0px 0px, rgb(74, 144, 226) 0.540302px 0.841471px 0px, rgb(74, 144, 226) -0.416147px 0.909297px 0px, rgb(74, 144, 226) -0.989992px 0.14112px 0px, rgb(74, 144, 226) -0.653644px -0.756802px 0px, rgb(74, 144, 226) 0.283662px -0.958924px 0px, rgb(74, 144, 226) 0.96017px -0.279415px 0px",
+          "color": "rgb(209, 204, 189)",
+          "float": "left",
+          "font-family": "'Roboto Slab'",
+          "font-size": "590%",
+          "font-weight": "700",
+          "line-height": "80%",
+          "margin-right": ".1em",
+          "padding-left": ".1em",
+          "width": ".8em",
+        },
+      },
+      "ref": null,
+      "rendered": "D",
+      "type": "span",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX special tags should handle <pre> tags with children 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <pre>
+    <b>
+      Hello world
+        
+      yo
+    </b>
+    this
+       
+    is
+       
+    a
+    <i>
+         
+      test
+    </i>
+  </pre>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <b>
+          Hello world
+            
+          yo
+        </b>,
+        "this",
+        "   ",
+        "is",
+        "   ",
+        "a",
+        <i>
+             
+          test
+        </i>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Hello world",
+            "  ",
+            "yo",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Hello world",
+          "  ",
+          "yo",
+        ],
+        "type": "b",
+      },
+      "this",
+      "   ",
+      "is",
+      "   ",
+      "a",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "   ",
+            "test",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "   ",
+          "test",
+        ],
+        "type": "i",
+      },
+    ],
+    "type": "pre",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <b>
+            Hello world
+              
+            yo
+          </b>,
+          "this",
+          "   ",
+          "is",
+          "   ",
+          "a",
+          <i>
+               
+            test
+          </i>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Hello world",
+              "  ",
+              "yo",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Hello world",
+            "  ",
+            "yo",
+          ],
+          "type": "b",
+        },
+        "this",
+        "   ",
+        "is",
+        "   ",
+        "a",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "   ",
+              "test",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "   ",
+            "test",
+          ],
+          "type": "i",
+        },
+      ],
+      "type": "pre",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX special tags should strip malformed CSS properties in accordance with a robust CSS parser 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <span
+    style={
+      Object {
+        "*border-bottom": ".175em solid rgba( 209, 204, 189, 1)",
+        "*font-style": "italic",
+        "color": "rgb(209, 204, 189)",
+        "float": "left",
+        "font-family": "'Roboto Slab'",
+        "font-size": "590%",
+        "font-weight": "700",
+        "line-height": "80%",
+        "margin-right": ".1em",
+        "padding-left": ".1em",
+        "width": ".8em",
+      }
+    }
+  >
+    D
+  </span>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "D",
+      "style": Object {
+        "*border-bottom": ".175em solid rgba( 209, 204, 189, 1)",
+        "*font-style": "italic",
+        "color": "rgb(209, 204, 189)",
+        "float": "left",
+        "font-family": "'Roboto Slab'",
+        "font-size": "590%",
+        "font-weight": "700",
+        "line-height": "80%",
+        "margin-right": ".1em",
+        "padding-left": ".1em",
+        "width": ".8em",
+      },
+    },
+    "ref": null,
+    "rendered": "D",
+    "type": "span",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "D",
+        "style": Object {
+          "*border-bottom": ".175em solid rgba( 209, 204, 189, 1)",
+          "*font-style": "italic",
+          "color": "rgb(209, 204, 189)",
+          "float": "left",
+          "font-family": "'Roboto Slab'",
+          "font-size": "590%",
+          "font-weight": "700",
+          "line-height": "80%",
+          "margin-right": ".1em",
+          "padding-left": ".1em",
+          "width": ".8em",
+        },
+      },
+      "ref": null,
+      "rendered": "D",
+      "type": "span",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`HTMLtoJSX special tags should use "defaultValue" for textareas 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <textarea
+    defaultValue="hello
+world"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "defaultValue": "hello
+world",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": "textarea",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "defaultValue": "hello
+world",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "textarea",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

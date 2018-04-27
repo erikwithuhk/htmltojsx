@@ -17,6 +17,7 @@
  * traversal of the resulting DOM tree.
  */
 
+import cssToObject from '@kohlmannj/css-to-object';
 import { isNumeric, trimEnd } from './utils';
 import {
   NODE_TYPE,
@@ -24,7 +25,6 @@ import {
   ELEMENT_ATTRIBUTE_MAPPING,
   ELEMENT_TAG_NAME_MAPPING,
 } from './mapping';
-import parseStyles from './parseStyles';
 
 const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
 const SVGDOMPropertyConfig = require('react-dom/lib/SVGDOMPropertyConfig');
@@ -445,8 +445,8 @@ class HTMLtoJSX {
    * @return {string}
    */
   _getStyleAttribute(styles) {
-    const jsxStyles = parseStyles(styles);
-    return `style={{${jsxStyles}}}`;
+    const jsxStyles = cssToObject(styles);
+    return `style={${JSON.stringify(jsxStyles)}}`;
   }
 
   /**
